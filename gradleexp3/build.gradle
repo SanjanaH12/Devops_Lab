@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+task helloGradle {
+    doLast {
+        println "1AY23CD052"
+        println "Hello! This task is executed using Gradle Automation."
+    }
+}
+
+task buildProject {
+    println "1AY23CD052"
+    dependsOn clean, build
+}
+
+task acharya {
+    doLast {
+        println"1AY23CD052"
+        println "This is my custom task in gradle"
+    }
+}
+
+task clean_and_Build {
+    dependsOn clean, build
+}
+
+task copyFile(type: Copy) {
+    from 'src'
+    into 'backup'
+}
