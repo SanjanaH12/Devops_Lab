@@ -1,0 +1,12 @@
+---
+- name: Deploy Maven Artifact
+  hosts: webserver
+  become: yes
+
+  tasks:
+
+    - name: Copy JAR file
+      copy:
+        src: ../target/EXP_8-1.0-SNAPSHOT.jar
+        dest: /opt/myapp/EXP_8.jar
+        mode: '0644'
